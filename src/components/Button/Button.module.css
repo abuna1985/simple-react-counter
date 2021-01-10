@@ -1,0 +1,11 @@
+.counter {
+  background-color: blue;
+  color: #fff;
+  padding: 5px;
+}
+
+.zero {
+  background-color: #fff;
+  color: blue;
+  padding: 5px;
+}
