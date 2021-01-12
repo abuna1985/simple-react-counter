@@ -34,7 +34,7 @@
   padding-bottom: 15px;
 }
 
-@media (min-width: 680px) {
+@media (min-width: 700px) {
   .header {
     margin-bottom: 5em;
   }
