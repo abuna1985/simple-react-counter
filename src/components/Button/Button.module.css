@@ -1,7 +1,29 @@
 .counter {
-  background-color: blue;
+  align-items: center;
+  background-color: #328fe0;
+  border: 0;
+  border-radius: .2em;
+  cursor: pointer;
   color: #fff;
-  padding: 5px;
+  display: flex;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 35px;
+  justify-content: center;
+  width: 35px;
+}
+
+.counter:hover {
+  background-color: #0074D9;
+}
+
+.counter:active {
+  background-color: #005cad;
+}
+
+.counter:disabled {
+  background-color: #328fe0;
+  cursor: default;
 }
 
 .zero {
