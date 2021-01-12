@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Display.module.css'; 
 
-const Display = ({counter}) => {
+const Display = ({counter, testId}) => {
   return (
-    <p className={styles.counter}>{counter}</p>
+    <p className={styles.counter} data-testid={testId}>{counter}</p>
   );
 }
 
