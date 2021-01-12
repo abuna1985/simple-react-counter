@@ -1,33 +1,46 @@
-.counter {
-  align-items: center;
+.btn {
   background-color: #328fe0;
   border: 0;
   border-radius: .2em;
   cursor: pointer;
   color: #fff;
+  font-weight: bold;
+}
+
+.counter {
+  align-items: center;
   display: flex;
   font-size: 1.5rem;
-  font-weight: bold;
   height: 35px;
   justify-content: center;
   width: 35px;
 }
 
-.counter:hover {
+.reset {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  padding: 10px 20px;
+}
+
+.counter:hover,
+.reset:hover {
   background-color: #0074D9;
 }
 
-.counter:active {
+.counter:active,
+.reset:active {
   background-color: #005cad;
 }
 
-.counter:disabled {
+.counter:disabled,
+.reset:disabled {
   background-color: #328fe0;
   cursor: default;
 }
 
-.zero {
-  background-color: #fff;
-  color: blue;
-  padding: 5px;
+@media (min-width: 700px) {
+  .reset {
+    font-size: .9rem;
+    margin-bottom: 0;
+  }
 }
