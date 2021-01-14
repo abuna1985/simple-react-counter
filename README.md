@@ -14,7 +14,11 @@ This is a simple react project to demonstrate my knowledge in handling events, w
   - [Setup](#setup)
   - [Notable Features](#notable-features)
     - [Decrement and Reset Button Are Disabled When State is 0](#decrement-and-reset-button-are-disabled-when-state-is-0)
+      - [Initial Code For Buttons](#initial-code-for-buttons)
+      - [Solution for Buttons](#solution-for-buttons)
     - [<App> only depends on 3 functions for click event](#app-only-depends-on-3-functions-for-click-event)
+    - [Initial Code for Helper Functions](#initial-code-for-helper-functions)
+      - [Solution for Helper Functions](#solution-for-helper-functions)
   - [Requirements](#requirements)
   - [Purpose Of This Project](#purpose-of-this-project)
   - [Testing](#testing)
@@ -56,7 +60,7 @@ The browser should open at `http://localhost:3000`
 </div>
 <br>
 
-This is what I started with
+#### Initial Code For Buttons
 
 ```js
 const Button = (props) => (
@@ -84,6 +88,8 @@ const App = () => {
   )
 }
 ```
+
+#### Solution for Buttons
 
 With a counter, there is no need to drop below 0. So I decided that when the state was 0 for any counter, the decrement and reset button should be disabled.
 
@@ -147,7 +153,7 @@ We pass `!counterOne` which will be true if the value is 0 (converts to false) t
 
 ### <App> only depends on 3 functions for click event
 
-I started with this example for handling click events
+### Initial Code for Helper Functions
 
 ```js
 const Button = ({ onClick, text }) => (  <button onClick={onClick}>    {text}  </button>)
@@ -175,6 +181,8 @@ const App = () => {
   )
 }
 ```
+
+#### Solution for Helper Functions
 
 The thought of creating 6 functions (`incrementCounterOne`, `decrementCounterOne`, `incrementCounterTwo`, etc.) felt unnecessary. Then I realized I could make one function that incremented by 1, decremented by 1, and sets the counter to 0.
 
