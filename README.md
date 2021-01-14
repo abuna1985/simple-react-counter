@@ -16,18 +16,18 @@ This is a simple react project to demonstrate my knowledge in handling events, w
     - [Decrement and Reset Button Are Disabled When State is 0](#decrement-and-reset-button-are-disabled-when-state-is-0)
       - [Initial Code For Buttons](#initial-code-for-buttons)
       - [Solution for Buttons](#solution-for-buttons)
-    - [<App> only depends on 3 functions for click event](#app-only-depends-on-3-functions-for-click-event)
+    - [<App> Only Depends On 3 Functions For Handling Click Events](#app-only-depends-on-3-functions-for-handling-click-events)
     - [Initial Code for Helper Functions](#initial-code-for-helper-functions)
       - [Solution for Helper Functions](#solution-for-helper-functions)
   - [Requirements](#requirements)
   - [Purpose Of This Project](#purpose-of-this-project)
   - [Testing](#testing)
-    - [should have internal state equal to 0](#should-have-internal-state-equal-to-0)
-    - [should have increment button that is enabled](#should-have-increment-button-that-is-enabled)
-    - [should have decrement button that is disabled](#should-have-decrement-button-that-is-disabled)
-    - [increments counter](#increments-counter)
-    - [decrements counter](#decrements-counter)
-    - [resets counter](#resets-counter)
+    - [Should Have Internal State Equal To 0](#should-have-internal-state-equal-to-0)
+    - [Should Have Increment Button That Is Enabled](#should-have-increment-button-that-is-enabled)
+    - [Should Have Decrement Button That Is Disabled](#should-have-decrement-button-that-is-disabled)
+    - [Increments Counter](#increments-counter)
+    - [Decrements Counter](#decrements-counter)
+    - [Resets Counter](#resets-counter)
   - [Available Scripts](#available-scripts)
     - [`npm start`](#npm-start)
     - [`npm run test`](#npm-run-test)
@@ -151,7 +151,7 @@ function App() {
 
 We pass `!counterOne` which will be true if the value is 0 (converts to false) to the `isDisabled` prop within the `<Button>` component. Now the decrement and reset will only be available when the counter is not 0.
 
-### <App> only depends on 3 functions for click event
+### <App> Only Depends On 3 Functions For Handling Click Events
 
 ### Initial Code for Helper Functions
 
@@ -275,34 +275,34 @@ In addition, I wanted to challenge myself just a bit more. So I included unit te
 
 Here is the pseudo-code for what my unit test are running
 
-### should have internal state equal to 0
+### Should Have Internal State Equal To 0
 
 1. Render `<App>`
 2. Look for element with data-testid of `counter-one`, `counter-two`, `counter-three`  and confirm `textContent` is 0.
 
-### should have increment button that is enabled
+### Should Have Increment Button That Is Enabled
 
 1. Render `<App>`
 2. Look for element with data-testid of `counter-one-button-up`, `counter-two-button-up`, `counter-three-button-up` and confirm `disabled` is **not** an attribute on the element.
 
-### should have decrement button that is disabled
+### Should Have Decrement Button That Is Disabled
 
 1. Render `<App>`
 2. Look for element with data-testid of `counter-one-button-down`, `counter-two-button-down`, `counter-three-button-down` and confirm `disabled` is an attribute that exist on these elements.
-### increments counter
+### Increments Counter
 
 1. Render `<App>`
 2. Look for element with data-testid of `counter-one-button-up`, `counter-two-button-up`, `counter-three-button-up` and fire a click event.
 3. Look for element with data-testid of `counter-one`, `counter-two`, `counter-three` and confirm textContent is 1.
 
 
-### decrements counter
+### Decrements Counter
 
 1. Look for element with data-testid of `counter-one-button-up`, `counter-two-button-up`, `counter-three-button-up` and fire a click event.
 2. Look for element with data-testid of `counter-one-button-down`, `counter-two-button-down`, `counter-three-button-down` and fire a click event.
 3. Look for element with data-testid of `counter-one`, `counter-two`, `counter-three` and confirm textContent is 0.
 
-### resets counter
+### Resets Counter
 1. Look for element with data-testid of `counter-one-button-up`, `counter-two-button-up`, `counter-three-button-up` and fire a click event.
 2. Look for element with data-testid of `counter-one-button-up`, `counter-two-button-up`, `counter-three-button-up` and fire a click event again.
 3. Look for element with data-testid of `counter-one`, `counter-two`, `counter-three` and confirm textContent is 2.
