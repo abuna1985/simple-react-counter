@@ -85,7 +85,7 @@ const App = () => {
 }
 ```
 
-With a counter, there is no need to drop below 0. So I decided that when the sate was 0 for any counter, the decrement and reset button should be disabled.
+With a counter, there is no need to drop below 0. So I decided that when the state was 0 for any counter, the decrement and reset button should be disabled.
 
 ```js
 // ./components/Button/index.js
