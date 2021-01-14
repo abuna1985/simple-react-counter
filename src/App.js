@@ -28,7 +28,7 @@ function App() {
             <Display testId="counter-one" counter={counterOne} />  
             <Button testId="counter-one-button-up" handleClick={() => incrementCounter(setCounterOne, counterOne)}>+</Button>
           </div>
-          <Button type="reset" testId="counter-one-zero-button" isDisabled={!counterOne} handleClick={() => setCounterToZero(setCounterOne)}>Reset Counter 1</Button>
+          <Button type="reset" testId="counter-one-reset-button" isDisabled={!counterOne} handleClick={() => setCounterToZero(setCounterOne)}>Reset Counter 1</Button>
         </div>
         <div className={styles.counter}>
           <Title type="h2" text="Counter 2" />
@@ -37,7 +37,7 @@ function App() {
             <Display testId="counter-two" counter={counterTwo} />  
             <Button testId="counter-two-button-up" handleClick={() => incrementCounter(setCounterTwo, counterTwo)}>+</Button>
           </div>
-          <Button type="reset" testId="counter-two-zero-button" isDisabled={!counterTwo} handleClick={() => setCounterToZero(setCounterTwo)}>Reset Counter 2</Button>
+          <Button type="reset" testId="counter-two-reset-button" isDisabled={!counterTwo} handleClick={() => setCounterToZero(setCounterTwo)}>Reset Counter 2</Button>
         </div>
         <div className={styles.counter}>
           <Title type="h2" text="Counter 3" />
@@ -46,7 +46,7 @@ function App() {
             <Display testId="counter-three" counter={counterThree} />  
             <Button testId="counter-three-button-up" handleClick={() => incrementCounter(setCounterThree, counterThree)}>+</Button>
           </div>
-          <Button type="reset" testId="counter-three-zero-button" isDisabled={!counterThree} handleClick={() => setCounterToZero(setCounterThree)}>Reset Counter 3</Button>
+          <Button type="reset" testId="counter-three-reset-button" isDisabled={!counterThree} handleClick={() => setCounterToZero(setCounterThree)}>Reset Counter 3</Button>
         </div>
       </div>
     </>

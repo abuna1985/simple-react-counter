@@ -40,8 +40,9 @@ describe("Counter 1", () => {
     
     fireEvent.click(getByTestId('counter-one-button-up'))
     fireEvent.click(getByTestId('counter-one-button-up'))
-    fireEvent.click(getByTestId('counter-one-zero-button'))
+    expect(getByTestId('counter-one')).toHaveTextContent('2')
 
+    fireEvent.click(getByTestId('counter-one-reset-button'))
     expect(getByTestId('counter-one')).toHaveTextContent('0')
   });
 });
@@ -85,8 +86,9 @@ describe("Counter 2", () => {
     
     fireEvent.click(getByTestId('counter-two-button-up'))
     fireEvent.click(getByTestId('counter-two-button-up'))
-    fireEvent.click(getByTestId('counter-two-zero-button'))
+    expect(getByTestId('counter-two')).toHaveTextContent('2')
 
+    fireEvent.click(getByTestId('counter-two-reset-button'))
     expect(getByTestId('counter-two')).toHaveTextContent('0')
   });
 });
@@ -130,8 +132,9 @@ describe("Counter 3", () => {
     
     fireEvent.click(getByTestId('counter-three-button-up'))
     fireEvent.click(getByTestId('counter-three-button-up'))
-    fireEvent.click(getByTestId('counter-three-zero-button'))
+    expect(getByTestId('counter-three')).toHaveTextContent('2')
 
+    fireEvent.click(getByTestId('counter-three-reset-button'))
     expect(getByTestId('counter-three')).toHaveTextContent('0')
   });
 });
