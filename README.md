@@ -93,7 +93,16 @@ import React from 'react'
 import styles from './Button.module.css'; 
 
 const Button = ({handleClick, children, type, testId, isDisabled }) => {
-   return  <button data-testid={testId} onClick={handleClick} className={`${styles.btn} ${type === "reset" ? styles.reset : styles.counter}`} disabled={isDisabled}><span>{children}</span></button>;
+   return  (
+    <button 
+      data-testid={testId} 
+      onClick={handleClick} 
+      className={`${styles.btn} ${type === "reset" ? styles.reset : styles.counter}`} 
+      disabled={isDisabled}
+    >
+      <span>{children}</span>
+    </button>;
+   );
 }
 
 export default Button;
@@ -113,10 +122,23 @@ function App() {
   return(
    ...
     <div className={styles.body}>
-      <Button testId="counter-one-button-down" isDisabled={!counterOne} handleClick={() => decrementCounter(setCounterOne, counterOne)}>-</Button>
+      <Button 
+        testId="counter-one-button-down" 
+        isDisabled={!counterOne} 
+        handleClick={() => decrementCounter(setCounterOne, counterOne)}
+      >
+        -
+      </Button>
       ...
     </div>
-    <Button type="reset" testId="counter-one-zero-button" isDisabled={!counterOne} handleClick={() => setCounterToZero(setCounterOne)}>Reset Counter 1</Button>
+    <Button 
+      type="reset" 
+      testId="counter-one-zero-button" 
+      isDisabled={!counterOne} 
+      handleClick={() => setCounterToZero(setCounterOne)}
+    >
+      Reset Counter 1
+    </Button>
   );
 }
 ```
@@ -146,7 +168,9 @@ const App = () => {
   return (
     <div>
       {left}
-      <Button onClick={handleLeftClick} text='left' />      <Button onClick={handleRightClick} text='right' />      {right}
+      <Button onClick={handleLeftClick} text='left' />     
+      <Button onClick={handleRightClick} text='right' />      
+      {right}
     </div>
   )
 }
@@ -178,13 +202,31 @@ function App() {
       <Title type="h2" text="Counter 1" />
       <div className={styles.body}>
         {/* This will run `setCounterOne(counterOne - 1)`*/}
-        <Button testId="counter-one-button-down" isDisabled={!counterOne} handleClick={() => decrementCounter(setCounterOne, counterOne)}>-</Button>
+        <Button 
+          testId="counter-one-button-down" 
+          isDisabled={!counterOne} 
+          handleClick={() => decrementCounter(setCounterOne, counterOne)}
+        >
+          -
+        </Button>
         <Display testId="counter-one" counter={counterOne} />
         {/* This will run `setCounterOne(counterOne + 1)`*/}  
-        <Button testId="counter-one-button-up" handleClick={() => incrementCounter(setCounterOne, counterOne)}>+</Button>
+        <Button 
+          testId="counter-one-button-up"
+          handleClick={() => incrementCounter(setCounterOne, counterOne)}
+        >
+          +
+        </Button>
       </div>
       {/* This will run `setCounterOne(0)`*/} 
-      <Button type="reset" testId="counter-one-zero-button" isDisabled={!counterOne} handleClick={() => setCounterToZero(setCounterOne)}>Reset Counter 1</Button>
+      <Button 
+        type="reset" 
+        testId="counter-one-zero-button" 
+        isDisabled={!counterOne} 
+        handleClick={() => setCounterToZero(setCounterOne)}
+      >
+        Reset Counter 1
+      </Button>
     </div>
     ...
 ```
@@ -307,7 +349,7 @@ This project was created with:
 
 - [Create React App](https://create-react-app.dev/docs/getting-started)
 - [React Testing Library (included with create-react-app)](https://testing-library.com/docs/react-testing-library/intro/)
-- [CSS modules]()
-- [gh-pages]()
+- [CSS modules](https://github.com/css-modules/css-modules)
+- [gh-pages](https://create-react-app.dev/docs/deployment#github-pages)
 
 
