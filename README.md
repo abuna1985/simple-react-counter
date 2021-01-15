@@ -5,7 +5,7 @@
 </div>
 <br>
 
-This is a simple react project to demonstrate my knowledge in handling events, working with props/state, and applying the concept of [lifting the state](https://reactjs.org/docs/lifting-state-up.html). I have also styled the page with [CSS modules](https://github.com/css-modules/css-modules) and added tests with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/). If you would like to learn more about how I built this, feel free to skip to the ['Purpose Of This Project' section](#purpose-of-this-project)
+This is a simple react project to demonstrate my knowledge in handling events, working with props/state, and applying the concept of [lifting the state](https://reactjs.org/docs/lifting-state-up.html). The  page is styled with [CSS modules](https://github.com/css-modules/css-modules) and unit tests using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/). If you would like to learn more this was built, feel free to skip to the ['Notable-Features'](#notable-features) ['Purpose Of This Project' section](#purpose-of-this-project)
 
 ## Table Of Contents
 - [Simple React Counter](#simple-react-counter)
@@ -13,10 +13,10 @@ This is a simple react project to demonstrate my knowledge in handling events, w
   - [Live Demo](#live-demo)
   - [Setup](#setup)
   - [Notable Features](#notable-features)
-    - [Decrement and Reset Button Are Disabled When State is 0](#decrement-and-reset-button-are-disabled-when-state-is-0)
+    - [1. Decrement and Reset Button Are Disabled When State is 0](#1-decrement-and-reset-button-are-disabled-when-state-is-0)
       - [Initial Code For Buttons](#initial-code-for-buttons)
       - [Solution for Buttons](#solution-for-buttons)
-    - [<App> Only Depends On 3 Functions For Handling Click Events](#app-only-depends-on-3-functions-for-handling-click-events)
+    - [2. <App> Only Depends On 3 Functions For Handling Click Events](#2-app-only-depends-on-3-functions-for-handling-click-events)
       - [Initial Code for Helper Functions](#initial-code-for-helper-functions)
       - [Solution for Helper Functions](#solution-for-helper-functions)
   - [Requirements](#requirements)
@@ -42,7 +42,7 @@ This is a simple react project to demonstrate my knowledge in handling events, w
 
 ## Setup
 
-Change directories (cd) to this repo within your terminal and run the following commands:
+Change directories (cd) to this folder(repo) within your terminal and run the following commands:
 
 ```shell
 npm install
@@ -53,7 +53,7 @@ The browser should open at `http://localhost:3000`
 
 ## Notable Features
 
-### Decrement and Reset Button Are Disabled When State is 0
+### 1. Decrement and Reset Button Are Disabled When State is 0
 
 <div style="display:flex;justify-content:center;width:100%;">
   <img src="./images/disabled-button.gif" alt="Showing the toggle feature for  decrement/reset button when state is 0" />
@@ -91,7 +91,7 @@ const App = () => {
 
 #### Solution for Buttons
 
-With a counter, there is no need to drop below 0. So I decided that when the state was 0 for any counter, the decrement and reset button should be disabled.
+With a counter, there is no need to drop below 0. So when the state is 0 for any counter, the decrement and reset button should be disabled.
 
 ```js
 // ./components/Button/index.js
@@ -114,7 +114,7 @@ const Button = ({handleClick, children, type, testId, isDisabled }) => {
 export default Button;
 ```
 
-I added a prop called `isDisabled` to the `<Button>` component and tied that boolean value to `disabled` attribute within the HTML `<button>` element. `disabled` would only show if the condition was `true`. 
+A prop called `isDisabled` was added within the `<Button>` component. The value will be a boolean and will show/hide the `disabled` attribute within the HTML `<button>` element. `disabled` would only show if the condition was `true`. 
 
 ```js
 // ./App.js
@@ -151,7 +151,7 @@ function App() {
 
 We pass `!counterOne` which will be true if the value is 0 (converts to false) to the `isDisabled` prop within the `<Button>` component. Now the decrement and reset will only be available when the counter is not 0.
 
-### <App> Only Depends On 3 Functions For Handling Click Events
+### 2. <App> Only Depends On 3 Functions For Handling Click Events
 
 #### Initial Code for Helper Functions
 
@@ -184,7 +184,7 @@ const App = () => {
 
 #### Solution for Helper Functions
 
-The thought of creating 6 functions (`incrementCounterOne`, `decrementCounterOne`, `incrementCounterTwo`, etc.) felt unnecessary. Then I realized I could make one function that incremented by 1, decremented by 1, and sets the counter to 0.
+The thought of creating 6 increment/decrement functions for 3 counters (`incrementCounterOne`, `decrementCounterOne`, `incrementCounterTwo`, etc.) felt unnecessary. A better idea was to make one function that incremented by 1, decremented by 1, and sets the counter to 0. And when the counter action is clicked pass the update state function and the count of the current counter and run the update and the component tied to the state will also update.
 
 ```js
 ...
@@ -198,8 +198,11 @@ function App() {
   const [counterThree, setCounterThree] = useState(0);
 
   // pass the function you want to run and the current state of the counter
+  // Pass the state update function and current count for that counter, add 1 to counter
   const incrementCounter = (func, counter) => func(counter + 1);
+  // Pass the state update function and current count for that counter, subtract 1 from the counter
   const decrementCounter = (func, counter) => func(counter - 1);
+  // Pass the state update function, set it to zero
   const setCounterToZero = (func) => func(0);
 
 
@@ -239,7 +242,7 @@ function App() {
     ...
 ```
 
-I made a reusable component and all I need to do in order to add counters is create state and add JSX to the App.js.
+Now the functions are reusable and they don't care about the counter state. If I wanted to make a 4th counter, all I need to do is initiate state for a 4th counter and add the JSX (`<Title>`, `<Display>` `<Buttons>`). Now I see the benefit of reuseable components.
 
 ## Requirements
 
@@ -262,14 +265,14 @@ I made a reusable component and all I need to do in order to add counters is cre
 
 ## Purpose Of This Project
 
-I completed the reading and exercise for [Part 1 of the Full Stack Open Course](https://fullstackopen.com/en/part1). Unfortunately, I did not feel I fully confident in applying these skills in a practical scenario.  So I decided to do 2 things: 
+After completing the reading and exercises for [Part 1 of the Full Stack Open Course](https://fullstackopen.com/en/part1), all of the content made sense to a point. So I decided to do two things to solidify my knowledge:
 
-1. Take notes that are a helpful reference if I need a quick refresher. [The notes for part 1 can be found here](https://github.com/abuna1985/full-stack-open-course/tree/main/notes). 
-2. Build a project with the knowledge gained and best-practices applied.
+1. Took notes and documented best-practices that would be a helpful reference in the future for myself or other people learning react. [The notes for part 1 can be found here](https://github.com/abuna1985/full-stack-open-course/tree/main/notes). 
+2. Built a project with the knowledge gained and best-practices applied from the Part 1 articles.
 
-I realized I could build on these examples and create an application with 3 separate counters within the `<App>` state. I would use `props` to customize the `<Title>`, `<Button>`, and `<Display>` components. I would use state hooks to update the 3 counters separately. And all the state and function logic would remain in the <App> component and the other components would be given data and rendered without worrying about where the count is.
+Using the examples from the articles in Part 1, I created a react application with 3 separate counters within the `<App>` component state. I used `props` to customize the `<Title>`, `<Button>`, and `<Display>` components. I used state hooks to update the 3 counters separately. All the state and function logic would remain in the <App> component and the other components would be given data and rendered without worrying about where the count is.
 
-In addition, I wanted to challenge myself just a bit more. So I included unit testing with `React Testing Library` and scoped styling with CSS modules. 
+In order to make this project a little more challenging, I created unit tests with `React Testing Library` and scoped styling with CSS modules. 
 
 ## Testing
 
