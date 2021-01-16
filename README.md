@@ -184,7 +184,7 @@ const App = () => {
 
 #### Solution for Helper Functions
 
-The thought of creating 6 increment/decrement functions for 3 counters (`incrementCounterOne`, `decrementCounterOne`, `incrementCounterTwo`, etc.) felt unnecessary. A better idea was to make one function that incremented by 1, decremented by 1, and sets the counter to 0. And when the counter action is clicked pass the update state function and the count of the current counter and run the update and the component tied to the state will also update.
+The thought of creating 6 increment/decrement functions for 3 counters (`incrementCounterOne`, `decrementCounterOne`, `incrementCounterTwo`, etc.) felt unnecessary. A better idea was to make one function that incremented by 1, decremented by 1, and sets the counter to 0. When the counter action is clicked, we pass the update state function and the count of the current counter and run the update. The component tied to the state will also re-render with the new state.
 
 ```js
 ...
