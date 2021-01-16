@@ -5,7 +5,7 @@
 </div>
 <br>
 
-This is a simple react project to demonstrate my knowledge in handling events, working with props/state, and applying the concept of [lifting the state](https://reactjs.org/docs/lifting-state-up.html). The  page is styled with [CSS modules](https://github.com/css-modules/css-modules) and unit tests using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/). If you would like to learn more this was built, feel free to skip to the ['Notable-Features' section](#notable-features) or the ['Purpose Of This Project' section](#purpose-of-this-project)
+This is a simple React project to demonstrate my knowledge in handling events, working with props/state, and applying the concept of [lifting the state](https://reactjs.org/docs/lifting-state-up.html). The  page is styled with [CSS modules](https://github.com/css-modules/css-modules) and unit tests using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/). If you would like to learn more this was built, feel free to skip to the ['Notable-Features' section](#notable-features) or the ['Purpose Of This Project' section](#purpose-of-this-project)
 
 ## Table Of Contents
 - [Simple React Counter](#simple-react-counter)
@@ -250,7 +250,7 @@ Now the functions are reusable and they don't care about the counter state. If I
 
 [x] Apply `useState` to 3 separate counters.
 
-[x] Use a organized structure for `components` in the react application.
+[x] Use a organized structure for `components` in the React application.
 
 [x] Have 3 separate counters that work independently of each other.
 
@@ -260,17 +260,17 @@ Now the functions are reusable and they don't care about the counter state. If I
 
 [x] Write 5-6 unit tests with `react-testing-library` that show the functionality is successful.
 
-[x] Incorporate CSS modules in the react application.
+[x] Incorporate CSS modules in the React application.
 
 
 ## Purpose Of This Project
 
 After completing the reading and exercises for [Part 1 of the Full Stack Open Course](https://fullstackopen.com/en/part1), all of the content made sense to a point. So I decided to do two things to solidify my knowledge:
 
-1. Took notes and documented best-practices that would be a helpful reference in the future for myself or other people learning react. [The notes for part 1 can be found here](https://github.com/abuna1985/full-stack-open-course/tree/main/notes). 
+1. Took notes and documented best-practices that would be a helpful reference in the future for myself or other people learning React. [The notes for part 1 can be found here](https://github.com/abuna1985/full-stack-open-course/tree/main/notes). 
 2. Built a project with the knowledge gained and best-practices applied from the Part 1 articles.
 
-Using the examples from the articles in Part 1, I created a react application with 3 separate counters within the `<App>` component state. I used `props` to customize the `<Title>`, `<Button>`, and `<Display>` components. I used state hooks to update the 3 counters separately. All the state and function logic would remain in the <App> component and the other components would be given data and rendered without worrying about where the count is.
+Using the examples from the articles in Part 1, I created a React application with 3 separate counters within the `<App>` component state. I used `props` to customize the `<Title>`, `<Button>`, and `<Display>` components. I used state hooks to update the 3 counters separately. All the state and function logic would remain in the <App> component and the other components would be given data and rendered without worrying about where the count is.
 
 In order to make this project a little more challenging, I created unit tests with `React Testing Library` and scoped styling with CSS modules. 
 
