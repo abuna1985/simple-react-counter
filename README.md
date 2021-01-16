@@ -5,7 +5,7 @@
 </div>
 <br>
 
-This is a simple react project to demonstrate my knowledge in handling events, working with props/state, and applying the concept of [lifting the state](https://reactjs.org/docs/lifting-state-up.html). The  page is styled with [CSS modules](https://github.com/css-modules/css-modules) and unit tests using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/). If you would like to learn more this was built, feel free to skip to the ['Notable-Features'](#notable-features) ['Purpose Of This Project' section](#purpose-of-this-project)
+This is a simple react project to demonstrate my knowledge in handling events, working with props/state, and applying the concept of [lifting the state](https://reactjs.org/docs/lifting-state-up.html). The  page is styled with [CSS modules](https://github.com/css-modules/css-modules) and unit tests using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/). If you would like to learn more this was built, feel free to skip to the ['Notable-Features' section](#notable-features) or the ['Purpose Of This Project' section](#purpose-of-this-project)
 
 ## Table Of Contents
 - [Simple React Counter](#simple-react-counter)
