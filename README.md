@@ -38,7 +38,7 @@ This is a simple react project to demonstrate my knowledge in handling events, w
 
 ## Live Demo
 
-**[Live Demo of Simple React Counter on GitHub Pages](https://abuna1985.github.io/simple-react-counter/<h4>)**
+**[Live Demo of Simple React Counter on GitHub Pages](https://abuna1985.github.io/simple-react-counter/)**
 
 ## Setup
 
